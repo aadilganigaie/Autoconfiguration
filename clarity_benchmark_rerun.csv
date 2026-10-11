@@ -1,0 +1,3 @@
+device_name,protocol,success,abstained,shacl_valid,deployed,latency_ms,retry_count,shacl_violations,safety_violations
+Pressure Sensor PS500,opcua,True,False,True,True,5571598.9,0,0,0
+Motor Drive VFD300,profibus,False,True,False,False,4351378.1,0,0,0

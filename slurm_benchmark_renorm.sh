@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH --job-name=clarity_bench_renorm
+#SBATCH --partition=gpu_x450
+#SBATCH --nodes=1
+#SBATCH --gres=gpu:h100:1
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=64G
+#SBATCH --time=01:00:00
+#SBATCH --output=clarity/evaluation/results/slurm_bench_renorm_%j.log
+set -x
+cd "$SLURM_SUBMIT_DIR"
+PY=$HOME/.conda/envs/clarity/bin/python
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+# frozen benchmark retrieval_eval, now picking up normalized graph_boost default
+$PY -m clarity.evaluation.retrieval_eval \
+    --out clarity/evaluation/results/retrieval_eval_R1_normalized.json
+exit $?

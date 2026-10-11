@@ -1,0 +1,6 @@
+device_name,protocol,success,abstained,shacl_valid,deployed,latency_ms,retry_count,shacl_violations,safety_violations
+Temperature Sensor TH200,modbus,True,False,True,True,2148452.9,0,0,0
+Pressure Sensor PS500,opcua,False,True,False,False,11101631.6,0,0,0
+Motor Drive VFD300,profibus,False,True,False,False,2333579.5,0,0,0
+CANopen Encoder ENC100,fieldbus,True,False,True,True,1387327.6,0,0,0
+Unknown Legacy Device XYZ,modbus,False,True,False,False,211.1,0,0,0

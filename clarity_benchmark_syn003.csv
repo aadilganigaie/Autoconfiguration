@@ -1,0 +1,2 @@
+device_name,protocol,success,abstained,shacl_valid,deployed,latency_ms,retry_count,shacl_violations,safety_violations
+Motor Drive VFD300,profibus,True,False,True,True,3569169.7,0,0,0
